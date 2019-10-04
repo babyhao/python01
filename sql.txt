@@ -1,0 +1,17 @@
+create database dict default charset=utf8;
+
+create table user (
+id int primary key auto_increment,
+name varchar(32) not null,
+password varchar(16) default '000000');
+
+create table history (
+id int primary key auto_increment,
+name varchar(32) not null,
+word varchar(32) not null,
+time varchar(64));
+
+create table words (
+id int primary key auto_increment,
+word varchar(32) not null,
+interpret text not null);
